@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
-  <div class="my-5">
-    <%= form.label :image %>
-    <%= form.file_field :image, multipart: true %>
+  <div class="my-5 h-36">
+    <%= form.label :image, class: "h-full w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" do %>
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"><path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg>
+    <% end %>
+    <%= form.file_field :image, class: "hidden" %>
   </div>
 
   <div class="inline">
