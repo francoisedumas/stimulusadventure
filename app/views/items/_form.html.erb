@@ -1,4 +1,10 @@
-<%= form_with(model: item, class: "contents") do |form| %>
+<%= form_with(model: item,
+              class: "contents",
+              data: {
+                controller: "uploadzone",
+                uploadzone_target: "form",
+                action:"drop->uploadzone#acceptFiles dragover->uploadzone#dragover dragleave->uploadzone#dragleave" }
+            ) do |form| %>
   <% if item.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
       <h2><%= pluralize(item.errors.count, "error") %> prohibited this item from being saved:</h2>
@@ -12,13 +18,11 @@
   <% end %>
 
   <div class="my-5 h-36">
-    <%= form.label :image, class: "h-full w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" do %>
+    <%= form.label :image,
+        data: { uploadzone_target: "label" },
+        class: "h-full w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" do %>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"><path d="M11 9h4v2h-4v4H9v-4H5V9h4V5h2v4zm-1 11a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/></svg>
     <% end %>
-    <%= form.file_field :image, class: "hidden" %>
-  </div>
-
-  <div class="inline">
-    <%= form.submit class: "rounded-lg py-3 px-5 bg-blue-600 text-white inline-block font-medium cursor-pointer" %>
+    <%= form.file_field :image, class: "hidden", data: { action: "input->uploadzone#submit", uploadzone_target: "input" } %>
   </div>
 <% end %>
