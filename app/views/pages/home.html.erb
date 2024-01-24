@@ -1,0 +1,165 @@
+<div class="flex flex-col w-full">
+  <div class="bg-white">
+    <div class="mx-auto max-w-7xl px-6 py-12 sm:py-16 lg:px-8 lg:py-30">
+      <h1 class="mb-2 text-2xl font-bold leading-10 tracking-tight text-gray-900">Custom JS</h1>
+      <div class="mx-auto max-w-4xl divide-y divide-gray-900/10"
+        data-controller="toggle-all"
+        data-toggle-all-toggle-outlet=".fold">
+        <button type="button" class="flex w-full items-start justify-between text-left" aria-controls="faq-0" aria-expanded="false" data-controller="toggle" data-action="click->toggle#toggle touch->toggle#toggle click->toggle-all#toggleAll touch->toggle-all#toggleAll">
+          <h2 class="text-xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
+          <span class="ml-6 flex h-7 items-center">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+            </svg>
+
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+            </svg>
+          </span>
+        </button>
+        <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+          <div class="pt-6 fold" data-controller="toggle">
+            <dt>
+              <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false" data-action="click->toggle#toggle touch->toggle#toggle">
+                <span class="text-base font-semibold leading-7">What&#039;s the best thing about Switzerland?</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                  </svg>
+
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="hidden mt-2 pr-12" id="faq-0" data-toggle-target="toggleable">
+              <p class="text-base leading-7 text-gray-600">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+            </dd>
+          </div>
+          <div class="pt-6 fold" data-controller="toggle">
+            <dt>
+              <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false" data-action="click->toggle#toggle touch->toggle#toggle">
+                <span class="text-base font-semibold leading-7">Why do you never see elephants hiding in trees?</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                  </svg>
+
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="hidden mt-2 pr-12" id="faq-0" data-toggle-target="toggleable">
+              <p class="text-base leading-7 text-gray-600">Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+            </dd>
+          </div>
+          <div class="pt-6 fold" data-controller="toggle">
+            <dt>
+              <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false" data-action="click->toggle#toggle touch->toggle#toggle">
+                <span class="text-base font-semibold leading-7">What do you call someone with no body and no nose?</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                  </svg>
+
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-toggle-target="toggleable" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="hidden mt-2 pr-12" id="faq-0" data-toggle-target="toggleable">
+              <p class="text-base leading-7 text-gray-600">Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.</p>
+            </dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white w-full">
+    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+      <h1 class="mb-2 text-2xl font-bold leading-10 tracking-tight text-gray-900">Imported library JS</h1>
+      <div class="mx-auto max-w-4xl divide-y divide-gray-900/10"
+        data-controller="toggle-all"
+        data-toggle-all-reveal-outlet=".clip">
+        <button type="button" class="flex w-full items-start justify-between text-left" aria-controls="faq-0" aria-expanded="false" data-controller="reveal" data-action="click->reveal#toggle click->toggle-all#revealAll">
+          <h2 class="text-xl font-bold leading-10 tracking-tight text-gray-900">Frequently asked questions</h2>
+          <span class="ml-6 flex h-7 items-center">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+            </svg>
+
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+            </svg>
+          </span>
+        </button>
+        <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
+          <div class="pt-6 clip" data-controller="reveal" data-reveal-hidden-class="hidden">
+            <dt>
+              <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false" data-action="click->reveal#toggle">
+                <span class="text-base font-semibold leading-7">What&#039;s the best thing about Switzerland?</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                  </svg>
+
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="hidden mt-2 pr-12" id="faq-0" data-reveal-target="item">
+              <p class="text-base leading-7 text-gray-600">I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+            </dd>
+          </div>
+          <div class="pt-6 clip" data-controller="reveal" data-reveal-hidden-class="hidden">
+            <dt>
+              <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false" data-action="click->reveal#toggle">
+                <span class="text-base font-semibold leading-7">Why do you never see elephants hiding in trees?</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                  </svg>
+
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="hidden mt-2 pr-12" id="faq-0" data-reveal-target="item">
+              <p class="text-base leading-7 text-gray-600">Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.</p>
+            </dd>
+          </div>
+          <div class="pt-6 clip" data-controller="reveal" data-reveal-hidden-class="hidden">
+            <dt>
+              <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false" data-action="click->reveal#toggle">
+                <span class="text-base font-semibold leading-7">What do you call someone with no body and no nose?</span>
+                <span class="ml-6 flex h-7 items-center">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                  </svg>
+
+                  <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-reveal-target="item" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                  </svg>
+                </span>
+              </button>
+            </dt>
+            <dd class="hidden mt-2 pr-12" id="faq-0" data-reveal-target="item">
+              <p class="text-base leading-7 text-gray-600">Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.</p>
+            </dd>
+          </div>
+
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
