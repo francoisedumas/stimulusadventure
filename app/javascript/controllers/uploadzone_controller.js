@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="uploadzone"
 export default class extends Controller {
-  static targets = ["form", "label", "input"]
+  static targets = ["form", "label", "input", "overlay"]
 
   connect() {
     this.element.addEventListener("dragover", this.preventDragDefaults);
@@ -26,14 +26,16 @@ export default class extends Controller {
     this.submit();
   }
 
-  dragover(e) {
+  show(e) {
     e.preventDefault();
-    this.labelTarget.classList.add('bg-green-100');
+    this.overlayTarget.classList.remove("invisible");
   }
 
-  dragleave(e) {
+  hide(e) {
     e.preventDefault();
-    this.labelTarget.classList.remove('bg-green-100');
+    if (!this.element.contains(e.relatedTarget)) {
+      this.overlayTarget.classList.add("invisible");
+    }
   }
 
   submit() {

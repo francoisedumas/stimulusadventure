@@ -3,7 +3,7 @@
               data: {
                 controller: "uploadzone",
                 uploadzone_target: "form",
-                action:"drop->uploadzone#acceptFiles dragover->uploadzone#dragover dragleave->uploadzone#dragleave" }
+                action:"drop->uploadzone#acceptFiles dragover->uploadzone#show dragleave->uploadzone#hide" }
             ) do |form| %>
   <% if item.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
@@ -17,7 +17,13 @@
     </div>
   <% end %>
 
-  <div class="my-5 h-36">
+  <div class="my-5 relative h-36">
+    <div class="absolute inset-0 bg-gray-100 p-2 invisible" data-uploadzone-target="overlay">
+        <div class="border-2 border-dashed rounded-md h-full flex flex-col gap-2 items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"><path d="M9 10V8h2v2h2v2h-2v2H9v-2H7v-2h2zm-5 8h12V6h-4V2H4v16zm-2 1V0h12l4 4v16H2v-1z"/></svg>
+          <div class="text-sm font-medium text-gray-500">Ajoutez votre fichier</div>
+        </div>
+      </div>
     <%= form.label :image,
         data: { uploadzone_target: "label" },
         class: "h-full w-full flex flex-col items-center justify-center cursor-pointer bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" do %>
